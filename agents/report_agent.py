@@ -20,7 +20,7 @@ from reportlab.platypus import (
     TableStyle,
 )
 
-from api.gemini_api import LLMClient
+from api.llm_api import LLMClient
 from config import config
 from interview.session import InterviewSession
 from utils.helpers import seconds_between
