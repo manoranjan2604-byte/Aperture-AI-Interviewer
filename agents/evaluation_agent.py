@@ -5,7 +5,7 @@ returning structured scoring + feedback.
 """
 from typing import Any, Dict, Optional
 
-from api.gemini_api import LLMClient
+from api.llm_api import LLMClient
 from utils.helpers import clamp
 from utils.logger import get_logger
 
