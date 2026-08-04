@@ -1,11 +1,9 @@
 """
-api/gemini_api.py
+api/llm_api.py
 Thin LLM client abstraction. Cerebras is the primary provider, Groq is the
 automatic fallback — both are OpenAI-compatible APIs with generous free
 tiers, so the rest of the app only ever calls `LLMClient`, never a vendor
 SDK directly.
-(Module kept as gemini_api.py for import-path stability; rename freely if
-you'd rather it match the actual provider.)
 
 Trimmed 2026-07: this used to also support Gemini and OpenAI as
 selectable providers. Removed to cut dead code + unused dependencies
