@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 # are sync, edge-tts is genuinely async, so a nested loop is the simplest way
 # to run either behind a uniform timeout). This MUST be a separate pool from
 # the orchestrator event loop's own default executor: that default executor
-# is also used by api/gemini_api.py (LLM calls) and agents/meeting_agent.py
+# is also used by api/llm_api.py (LLM calls) and agents/meeting_agent.py
 # (status polling + bot removal via asyncio.to_thread). Running asyncio.run()
 # inside a thread borrowed from that shared default pool has been observed to
 # leave it unusable ("cannot schedule new futures after shutdown") for every
